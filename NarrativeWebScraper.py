@@ -45,4 +45,4 @@ print(commondWordsChart)
 # Always remember to end your file name with ".csv", otherwise this action will fail.
 commondWordsChart.to_csv(r'path/fileName.csv', index=False)
 
-Exit
+exit
