@@ -1,5 +1,5 @@
 # Narrative-Web-Scraper
-This is a simple script written with Python 3.7.3 that uses language processing to analyze the narrative of a website's home/landing page, notably those of news websites.
+This is a simple script written with Python 3.7.3 that uses nautral language processing to analyze the narrative of a website's home/landing page, notably those of news websites.
 
 Many people say that most news organizations have agendas and/or narratives that they like to instill in the information that they present to their audiences. What those narratives or agendas are can sometimes remain ambiguous, or blurred by the choice of layout and/or presentation of such information on said news organizations' websites. What this script aims to do is to ignore the layout and presentation of said information found on the selected website and instead view the information as one giant block of plain text and highlight the most common keywords presented on the website's home/landing page. 
 
