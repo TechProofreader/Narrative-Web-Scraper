@@ -20,4 +20,6 @@ Note, that if you're trying to use this script for websites that are heavy on CS
 
 Finally, you will observe that I chose to be verbose with my filteredText list with the long line of excluded tags. I chose to be explicit with this function because I think it's important to be specific in this type of analysis, so I don't want any possibility of ambiguity by simply writing a line of code that just says "only look at nouns." I want to see what exactly my script is ignoring, so that there is less chance for confusing results. Also, you cannot simply filter out stopwords either because that stopword list is small and only encompasses certain types of words, while allowing other useless forms of speech in relation to the script's goal. 
 
+As always with web scrapers, respect the robots.txt file of every website.
+
 Enjoy!
