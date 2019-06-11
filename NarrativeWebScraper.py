@@ -44,3 +44,5 @@ print(commondWordsChart)
 # would type where you want to save the file (the "path") and what you want to name it (fileName).
 # Always remember to end your file name with ".csv", otherwise this action will fail.
 commondWordsChart.to_csv(r'path/fileName.csv', index=False)
+
+Exit
