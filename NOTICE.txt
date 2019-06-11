@@ -1,4 +1,4 @@
-Here I will list the respective licenses for any libraries, frameworks, and/or toolkits that I utilized to create this script.
+Here I will list the respective licenses for any libraries, frameworks, and/or toolkits that I utilized to create this script, as well as provide URL links to their official webpages. 
 
 --------------------------------------------------------------------------------------------------------------------
 
