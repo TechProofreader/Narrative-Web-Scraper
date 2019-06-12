@@ -16,18 +16,24 @@ headers = {
         'referer': 'https://www.google.com/'
 }
 
-# Points program at the website you want to scrape. The timeout tells the program to cancel the request if a server response is not received
-# within the specified amount of seconds (this is done to prevent the program from hanging infinitely).
-page = requests.get("url goes here", headers=headers, timeout=3.0)
+# Points program at the website you want to scrape. The timeout tells the program to cancel the request
+# if a server response is not received within the specified amount of seconds and to print out the fact
+# that the script's web request has timed out (this is done to prevent the program from hanging infinitely).
+try:
+    page = requests.get("url goes here", headers=headers, timeout=3.0)
+except requests.Timeout:
+        print("We timed out, better luck next time.")
 
 # This block of code checks the content type of the page (HTML, XML, etc)
-h = requests.head("url goes here")
+h = requests.head("url goes here") # this url must match the one from "page"
 header = h.headers
 contentType = header.get('content-type')
 print(contentType)
 
 soup = BeautifulSoup(page.text, "html.parser") #captures entire webpage's text with markup (html, etc)
 x = soup.text # removes the markup and captures only the text
+
+y = re.sub(r'[^\w]', ' ', x) # removes everything but alphanumeric characters
 
 taggedText = nltk.tag.pos_tag(x.split())
 filteredText = [word for word, tag in taggedText if tag != 'JJ' and tag != 'JJS' and tag != 'JJR' and tag != 'CC' and tag != 'DT' and tag != 'IN' and tag != 'RB' and tag != 'RBR' and tag != 'RBS' and tag != 'VB' and tag != 'VBD' and tag != 'VBG' and tag != 'VBN' and tag != 'VBP' and tag != 'VBZ' and tag!= 'LS' and tag != 'PDT' and tag != 'SYM' and tag != 'RP' and tag != 'TO' and tag != 'WDT' and tag != 'WP' and tag != 'WRB' and tag != 'WP$' and tag != 'PRP' and tag != 'PRP$' and tag != 'MD']
