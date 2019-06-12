@@ -35,7 +35,7 @@ x = soup.text # removes the markup and captures only the text
 
 y = re.sub(r'[^\w]', ' ', x) # removes everything but alphanumeric characters
 
-taggedText = nltk.tag.pos_tag(x.split())
+taggedText = nltk.tag.pos_tag(y.split())
 filteredText = [word for word, tag in taggedText if tag != 'JJ' and tag != 'JJS' and tag != 'JJR' and tag != 'CC' and tag != 'DT' and tag != 'IN' and tag != 'RB' and tag != 'RBR' and tag != 'RBS' and tag != 'VB' and tag != 'VBD' and tag != 'VBG' and tag != 'VBN' and tag != 'VBP' and tag != 'VBZ' and tag!= 'LS' and tag != 'PDT' and tag != 'SYM' and tag != 'RP' and tag != 'TO' and tag != 'WDT' and tag != 'WP' and tag != 'WRB' and tag != 'WP$' and tag != 'PRP' and tag != 'PRP$' and tag != 'MD']
 # Note: filteredText is removing all words associated with the tags found in its list and creating
 # a new, filtered version of soup.text, but without the words that we filtered out. This new filtered
