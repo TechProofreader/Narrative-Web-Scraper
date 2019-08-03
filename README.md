@@ -13,6 +13,8 @@ Here's how it works:
 
 Note, that if you're trying to use this script for websites that are either heavy on CSS/Javascript and/or are poorly formatted, you may run into issues where your results appear to be random lines of markup mixed in with some actual words. For such websites, the script will require tweaks to account for that type of website build, which is why I included a few lines of code in my script that will print out what the webpage is built with, so that you can adjust accordingly. Otherwise, the script works wonderfully for most modern webpages and produces quite interesting results. For websites with which some tweaks still do not present the expected results, it is instead recommended to use Selenium to scrape, as it will view the webpage much like a real browser does and will not confuse the markup with the text content. 
 
+For those who are looking to learn about constructing web scrapers, fear not for I have chosen to annote my script with verbose comments so that you can better understand every part of it at every stage of action.
+
 As always with web scrapers, respect the robots.txt file of every website.
 
 Enjoy!
